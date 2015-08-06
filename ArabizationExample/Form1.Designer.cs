@@ -32,7 +32,6 @@
             this.ConvertBtn = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Convert = new System.Windows.Forms.TabPage();
-            this.MessagesLbl = new System.Windows.Forms.Label();
             this.OutputFileButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.OutputFileName = new System.Windows.Forms.TextBox();
@@ -44,14 +43,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.MessagesLbl = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1.SuspendLayout();
             this.Convert.SuspendLayout();
             this.About.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ConvertBtn
             // 
-            this.ConvertBtn.Location = new System.Drawing.Point(484, 136);
+            this.ConvertBtn.Location = new System.Drawing.Point(484, 119);
             this.ConvertBtn.Name = "ConvertBtn";
             this.ConvertBtn.Size = new System.Drawing.Size(75, 23);
             this.ConvertBtn.TabIndex = 0;
@@ -72,7 +74,7 @@
             // Convert
             // 
             this.Convert.BackColor = System.Drawing.Color.Transparent;
-            this.Convert.Controls.Add(this.MessagesLbl);
+            this.Convert.Controls.Add(this.statusStrip1);
             this.Convert.Controls.Add(this.OutputFileButton);
             this.Convert.Controls.Add(this.label2);
             this.Convert.Controls.Add(this.OutputFileName);
@@ -87,18 +89,9 @@
             this.Convert.TabIndex = 0;
             this.Convert.Text = "Convert";
             // 
-            // MessagesLbl
-            // 
-            this.MessagesLbl.AutoSize = true;
-            this.MessagesLbl.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.MessagesLbl.Location = new System.Drawing.Point(11, 225);
-            this.MessagesLbl.Name = "MessagesLbl";
-            this.MessagesLbl.Size = new System.Drawing.Size(0, 13);
-            this.MessagesLbl.TabIndex = 7;
-            // 
             // OutputFileButton
             // 
-            this.OutputFileButton.Location = new System.Drawing.Point(484, 91);
+            this.OutputFileButton.Location = new System.Drawing.Point(484, 77);
             this.OutputFileButton.Name = "OutputFileButton";
             this.OutputFileButton.Size = new System.Drawing.Size(75, 23);
             this.OutputFileButton.TabIndex = 6;
@@ -110,7 +103,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(12, 73);
+            this.label2.Location = new System.Drawing.Point(12, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 13);
             this.label2.TabIndex = 5;
@@ -118,14 +111,14 @@
             // 
             // OutputFileName
             // 
-            this.OutputFileName.Location = new System.Drawing.Point(11, 93);
+            this.OutputFileName.Location = new System.Drawing.Point(11, 79);
             this.OutputFileName.Name = "OutputFileName";
             this.OutputFileName.Size = new System.Drawing.Size(467, 20);
             this.OutputFileName.TabIndex = 4;
             // 
             // InputFileButton
             // 
-            this.InputFileButton.Location = new System.Drawing.Point(484, 44);
+            this.InputFileButton.Location = new System.Drawing.Point(484, 30);
             this.InputFileButton.Name = "InputFileButton";
             this.InputFileButton.Size = new System.Drawing.Size(75, 23);
             this.InputFileButton.TabIndex = 3;
@@ -137,7 +130,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(11, 26);
+            this.label1.Location = new System.Drawing.Point(11, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 2;
@@ -145,7 +138,7 @@
             // 
             // InputFileName
             // 
-            this.InputFileName.Location = new System.Drawing.Point(11, 46);
+            this.InputFileName.Location = new System.Drawing.Point(11, 32);
             this.InputFileName.Name = "InputFileName";
             this.InputFileName.Size = new System.Drawing.Size(467, 20);
             this.InputFileName.TabIndex = 1;
@@ -168,7 +161,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(17, 64);
+            this.textBox1.Location = new System.Drawing.Point(17, 55);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -180,7 +173,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 16);
+            this.label3.Location = new System.Drawing.Point(11, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(264, 35);
             this.label3.TabIndex = 0;
@@ -189,6 +182,21 @@
             // OpenFileDialog
             // 
             this.OpenFileDialog.FileName = "openFileDialog1";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MessagesLbl});
+            this.statusStrip1.Location = new System.Drawing.Point(3, 167);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(565, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // MessagesLbl
+            // 
+            this.MessagesLbl.Name = "MessagesLbl";
+            this.MessagesLbl.Size = new System.Drawing.Size(0, 17);
             // 
             // Form1
             // 
@@ -204,6 +212,8 @@
             this.Convert.PerformLayout();
             this.About.ResumeLayout(false);
             this.About.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -222,9 +232,10 @@
         private System.Windows.Forms.TextBox InputFileName;
         private System.Windows.Forms.OpenFileDialog OpenFileDialog;
         private System.Windows.Forms.SaveFileDialog SaveFileDialog;
-        private System.Windows.Forms.Label MessagesLbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel MessagesLbl;
     }
 }
 

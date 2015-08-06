@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>283, 17</value>
+  </metadata>
   <data name="textBox1.Text" xml:space="preserve">
     <value>This project is an example for using the Arabization class. Both the class and the example are developed by Sameh Barakat. Everything included in this project is released under the CC BY-NC-SA 4.0 license.  For more information visit: http://github.com/samehb/Arabization          http://sres.tumblr.com/</value>
   </data>
